@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src="js/get_post.js"></script>
+<script type="text/javascript" src="js/dependences.js"></script>
+
+<style type="text/css">
+	v{
+		background-color: #FFEB3B;
+	}
+
+	controller{
+		display: block;
+		background-color: #E0E0E0;
+	}
+</style>
+<body>
+
+<button href="A" place="1" src="html/a.html">A</button>
+<button href="B" place="1" src="html/b.html">B</button>
+
+<input type="text" oninput="a.firstname=this.value">
+
+	<controller name="a">
+
+		Имя: <v>firstname</v><br>
+		Фамилия: <v>lastname</v><br>
+		Телефон: <v>phone</v><br>
+
+		<for i="i" start="0" end="a.arr.length" step="1">
+			<r>arr[i]</r><br>
+		</for>
+
+		<for i="i" start="0" end="a.arr.length" step="1">
+			<r>arr[i]</r><br>
+		</for>
+	</controller>
+
+	<br>
+	<controller name="b">
+		<v>message</v>
+	</controller>
+
+<load place="1"></load>
+
+<input type="text" onchange="send_message(this.value); this.value=''">
+
+</body>
+</html>
